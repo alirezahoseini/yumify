@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button"
+import Header from "@/components/Header"
 
 export default function Home() {
   return (
-    <>
-      <Button>Button</Button>
-    </>
+    <div className="max-w-lg mx-auto container">
+      <Header />
+    </div>
   )
 }
