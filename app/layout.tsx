@@ -24,7 +24,13 @@ export default function RootLayout({ children }: Readonly<{
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={
+          `bg-center bg-no-repeat bg-cover bg-fixed
+          ${geistSans.variable} ${geistMono.variable} antialiased`
+        }
+        style={{ backgroundImage: "url(./bgb.svg)" }}
+      >
         <ReactQueryProvider>
           <ReduxProvider>
             {children}
