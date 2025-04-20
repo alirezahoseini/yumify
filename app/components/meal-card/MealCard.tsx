@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "next/image"
+import Link from "next/link"
 import { Button } from "../ui/button"
 import MealCardSkeleton from "./MealCardSkeleton"
 import { IMeal } from "@/types/types"
@@ -18,13 +18,11 @@ const MealCard = ({ meal, isLoading }: Props) => {
       : (
         <div className="border rounded-2xl p-4 shadow-md bg-white w-full">
           <div className="flex flex-col lg:flex-row gap-4">
-            <Image
-              src={meal.strMealThumb}
-              width={1024}
-              height={1024}
-              alt={meal.strMeal}
-              className="w-full lg:w-54 lg:h-54 rounded-lg"
-            />
+            <div
+              className="w-full h-74 lg:h-54 lg:w-84 rounded-lg bg-center bg-cover"
+              style={{ backgroundImage: `url(${meal.strMealThumb})` }}
+            >
+            </div>
 
             <div className="w-full">
               <h2 className="text-2xl font-bold mb-4">{meal.strMeal}</h2>
@@ -33,9 +31,11 @@ const MealCard = ({ meal, isLoading }: Props) => {
 
               <p className="mb-2"><span className="font-bold">Area: </span>{meal.strArea}</p>
 
-              <Button className="px-10 py-5">
-                Details
-              </Button>
+              <Link href={`/${meal.idMeal}`}>
+                <Button className="px-10 py-5 cursor-pointer">
+                  Details
+                </Button>
+              </Link>
 
             </div>
           </div>

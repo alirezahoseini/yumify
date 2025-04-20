@@ -17,7 +17,7 @@ const RandomMeal = () => {
   }
 
   return (
-    <div className="p-4 flex flex-col items-center gap-5 max-w-2xl mx-auto">
+    <div className="p-4 flex flex-col items-center gap-5 mx-auto">
       <Button 
         onClick={handleFetchMeal} 
         disabled={isFetching}
