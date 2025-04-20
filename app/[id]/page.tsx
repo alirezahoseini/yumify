@@ -1,12 +1,14 @@
 import React from "react"
 
-type IParams = {
-  params: { id: string }
+type Props = {
+  params: Promise<{
+    id: string
+  }>
 }
 
-const page = async ({ params }: IParams) => {
-  const awaitedParams = await params
-  const { id } = awaitedParams
+const page = async ({ params }: Props) => {
+  const resolvedParams = await params
+  const { id } = resolvedParams
 
   return (
     <div>{id}</div>
