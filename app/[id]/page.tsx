@@ -7,10 +7,9 @@ type IParams = {
 const page = async ({ params }: IParams) => {
   const awaitedParams = await params
   const { id } = awaitedParams
-  console.log(id)
 
   return (
-    <div>page</div>
+    <div>{id}</div>
   )
 }
 
