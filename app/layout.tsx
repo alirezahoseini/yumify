@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
+import { Toaster } from "sonner"
 import ReactQueryProvider from "./providers/ReactQueryProvider"
 import ReduxProvider from "./providers/ReduxProvider"
 
@@ -31,6 +32,8 @@ export default function RootLayout({ children }: Readonly<{
         }
         style={{ backgroundImage: "url(./bgb.svg)" }}
       >
+        <Toaster position="top-right" richColors />
+
         <ReactQueryProvider>
           <ReduxProvider>
             {children}

@@ -1,0 +1,25 @@
+import React from "react"
+import { Skeleton } from "@/components/ui/skeleton"
+
+const MealCardSkeleton = () => {
+  return (
+    <div className="border rounded-2xl p-4 shadow-md bg-white w-full">
+      <div className="flex flex-col lg:flex-row gap-4">
+        <Skeleton className="w-full lg:w-64 min-h-86" />
+
+        <div className="w-full flex gap-6 flex-col">
+          <Skeleton className="w-92 h-4" />
+
+          <Skeleton className="w-38 h-3" />
+
+          <Skeleton className="w-38 h-3" />
+
+          <Skeleton className="w-32 h-12 " />
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default MealCardSkeleton

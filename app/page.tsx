@@ -4,10 +4,10 @@ import Header from "@/app/components/Header"
 export default function Home() {
   return (
 
-    <div className="max-w-xl container mx-auto">
+    <div className="container mx-auto">
       <Header />
 
-      <h1 className="text-3xl font-bold mb-6 text-center mt-8">
+      <h1 className="text-3xl font-bold mb-6 text-center mt-6">
         What's For Dinner?
       </h1>
 
