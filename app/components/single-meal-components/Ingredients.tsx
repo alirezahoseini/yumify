@@ -6,8 +6,11 @@ type Props = {
 }
 
 const Ingredients = ({ data }: Props) => {
-  const ingredients = Object.keys(data).filter(key => key.startsWith("strIngredient") && data[key] !== "")
-  const measures = Object.keys(data).filter(key => key.startsWith("strMeasure") && data[key] !== "")
+  const ingredients = Object.keys(data).filter(key => key.startsWith("strIngredient") &&
+    data[key] !== "" && data[key] !== undefined && data[key] !== null)
+
+  const measures = Object.keys(data).filter(key => key.startsWith("strMeasure") &&
+    data[key] !== "" && data[key] !== undefined && data[key] !== null)
 
   return (
     <div className="w-full flex items-center justify-center gap-2 flex-col">

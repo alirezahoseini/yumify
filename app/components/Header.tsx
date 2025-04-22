@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header
       className="flex items-center justify-between 
-    px-5 py-3 lg:p-3 max-w-xl mx-auto"
+      px-5 py-3 lg:p-3 w-full max-w-xl mx-auto"
     >
       <Link 
         className="flex items-center gap-2"

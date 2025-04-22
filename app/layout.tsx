@@ -28,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{
     <html lang="en">
       <body
         className={
-          `bg-center bg-no-repeat bg-cover bg-fixed max-w-2xl container mx-auto
+          `bg-center bg-no-repeat bg-cover bg-fixed w-full
           ${geistSans.variable} ${geistMono.variable} antialiased`
         }
         style={{ backgroundImage: "url(./bgb.svg)" }}

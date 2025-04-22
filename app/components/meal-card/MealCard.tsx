@@ -34,7 +34,7 @@ const MealCard = ({ meal, isLoading }: Props) => {
               <Link href={`/${meal.idMeal}`}>
                 <Button
                   className="px-10 py-5 cursor-pointer w-full mt-2 bg-stone-100 text-stone-900
-                hover:bg-stone-950 hover:text-white"
+                hover:bg-stone-950 hover:text-white active:scale-95 transition-all duration-300"
                 >
                   Details
                 </Button>

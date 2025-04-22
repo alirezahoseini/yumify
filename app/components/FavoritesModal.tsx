@@ -28,13 +28,17 @@ const FavoritesModal = () => {
       </SheetTrigger>
 
       <SheetContent 
-        side="bottom"
-        className="w-full max-w-lg mx-auto min-h-96 rounded-t-2xl"
+        side="right"
       >
         <SheetHeader>
           <SheetTitle>My Favorites Foods</SheetTitle>
-          
         </SheetHeader>
+
+        <div className="flex items-center justify-center gap-2">
+          <Button>
+            m
+          </Button>
+        </div>
       </SheetContent>
     </Sheet>
   )

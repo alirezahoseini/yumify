@@ -13,7 +13,7 @@ const Buttons = () => {
     >
       <Button 
         onClick={() => router.back()} 
-        className="cursor-pointer"
+        className="cursor-pointer active:scale-95 transition-all duration-300"
       >
         <ArrowLeft />
         Back
@@ -21,7 +21,7 @@ const Buttons = () => {
 
       <Button
         variant="outline"
-        className="flex items-center gap-2 cursor-pointer"
+        className="flex items-center gap-2 cursor-pointer active:scale-95 transition-all duration-300"
       >
         <Heart />
         Add to Favorites

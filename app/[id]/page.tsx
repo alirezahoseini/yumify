@@ -27,7 +27,7 @@ const page = async ({ params }: Props) => {
         <SingleMaelNotFound status={data} />
       )
       : (
-        <div className="px-4 lg:px-0 mt-5 mb-14">
+        <div className="px-4 lg:px-0 mt-5 mb-14 mx-auto max-w-xl">
           <div
             className="border rounded-2xl p-4 shadow-md bg-white w-full flex 
             flex-col items-center justify-start gap-4"
