@@ -1,7 +1,7 @@
 "use client"
 import MealCard from "./meal-card/MealCard"
-import useMeal from "@/hooks/useMeal"
 import { Button } from "@/app/components/ui/button"
+import { useRandomMeal } from "@/hooks/useMeal"
 
 const RandomMeal = () => {
   const {
@@ -9,7 +9,7 @@ const RandomMeal = () => {
     isFetching,
     isError,
     fetchMeal
-  } = useMeal(false)
+  } = useRandomMeal({ enabled: false })
 
 
   const handleFetchMeal = () => {

@@ -17,14 +17,14 @@ const MealCard = ({ meal, isLoading }: Props) => {
       )
       : (
         <div className="border rounded-2xl p-4 shadow-md bg-white w-full">
-          <div className="flex flex-col lg:flex-row gap-4">
+          <div className="flex flex-col lg:flex-row gap-4 items-center">
             <div
               className="w-full h-74 lg:h-54 lg:w-84 rounded-lg bg-center bg-cover"
               style={{ backgroundImage: `url(${meal.strMealThumb})` }}
             >
             </div>
 
-            <div className="w-full">
+            <div className="w-full flex flex-col">
               <h2 className="text-2xl font-bold mb-4">{meal.strMeal}</h2>
 
               <p className="mb-2"><span className="font-bold">Category: </span>{meal.strCategory}</p>
@@ -32,7 +32,10 @@ const MealCard = ({ meal, isLoading }: Props) => {
               <p className="mb-2"><span className="font-bold">Area: </span>{meal.strArea}</p>
 
               <Link href={`/${meal.idMeal}`}>
-                <Button className="px-10 py-5 cursor-pointer">
+                <Button
+                  className="px-10 py-5 cursor-pointer w-full mt-2 bg-stone-100 text-stone-900
+                hover:bg-stone-950 hover:text-white"
+                >
                   Details
                 </Button>
               </Link>
