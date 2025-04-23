@@ -35,13 +35,14 @@ export default function RootLayout({ children }: Readonly<{
       >
         <Toaster position="top-right" richColors />
 
-        <Header />
+        <ReduxProvider>
 
-        <ReactQueryProvider>
-          <ReduxProvider>
+          <Header />
+
+          <ReactQueryProvider>
             {children}
-          </ReduxProvider>
-        </ReactQueryProvider>
+          </ReactQueryProvider>
+        </ReduxProvider>
       </body>
     </html>
   )

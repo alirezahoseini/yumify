@@ -64,7 +64,7 @@ const page = async ({ params }: Props) => {
 
           </div>
 
-          <Buttons />
+          <Buttons meal={data} />
         </div>
       )
   )
