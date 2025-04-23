@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation"
 import { ArrowLeft, Heart } from "lucide-react"
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { toast } from "sonner"
 import { Button } from "../ui/button"
 import { IMeal } from "@/types/types"
 import { addFavorite, removeFavorite } from "@/store/favoritesSlice"
@@ -18,12 +17,10 @@ const Buttons = ({ meal }: { meal: IMeal }) => {
 
   const handleAddFavorite = () => {
     dispatch(addFavorite(meal)) 
-    toast.success("Added to Favorites")
   }
 
   const handleRemoveFavorite = () => {
     dispatch(removeFavorite({ idMeal: meal.idMeal }))
-    toast.success("Removed from Favorites") 
   }
 
   return (

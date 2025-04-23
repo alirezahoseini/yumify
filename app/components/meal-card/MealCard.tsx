@@ -31,7 +31,7 @@ const MealCard = ({ meal, isLoading }: Props) => {
 
               <p className="mb-2"><span className="font-bold">Area: </span>{meal.strArea}</p>
 
-              <Link href={`/${meal.idMeal}`}>
+              <Link href={`/meal/${meal.idMeal}`}>
                 <Button
                   className="px-10 py-5 cursor-pointer w-full mt-2 bg-stone-100 text-stone-900
                 hover:bg-stone-950 hover:text-white active:scale-95 transition-all duration-300"
