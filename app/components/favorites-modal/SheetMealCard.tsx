@@ -32,6 +32,7 @@ const SheetMealCard = ({ meal, setIsOpen }: Props) => {
           width={100}
           height={100}
           className="rounded-md"
+          unoptimized
         />
       </Link>
 
