@@ -43,7 +43,7 @@ export const useRandomMeal = ({ enabled }: Props) => {
 const useMeal = ({ enabled, id }: Props) => {
 
   const query = useQuery<IMealResponse>({
-    queryKey: ["meal"],
+    queryKey: ["meal", id],
     queryFn: async () => {
       const response = await API.get<IMealResponse>(`lookup.php?i=${id}`)
       return response.data

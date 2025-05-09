@@ -6,6 +6,7 @@ import { Youtube } from "lucide-react"
 import Badges from "./Badges"
 import Ingredients from "./Ingredients"
 import Buttons from "./Buttons"
+import SingleMealSkeleton from "./SingleMealSkeleton"
 import useMeal from "@/hooks/useMeal"
 
 const MainWrapper = ({ mealId }: { mealId: string }) => {
@@ -22,7 +23,7 @@ const MainWrapper = ({ mealId }: { mealId: string }) => {
 
       {
         isLoading
-          ? <h1>loading...</h1>
+          ? <SingleMealSkeleton />
           : (
             meal && (
               <div className="px-4 lg:px-0 mt-5 mb-14 mx-auto max-w-xl">
@@ -67,7 +68,6 @@ const MainWrapper = ({ mealId }: { mealId: string }) => {
               </div>
             )
           )
-
       }
     </div>
   )
